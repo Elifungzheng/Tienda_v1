@@ -60,5 +60,10 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> metodoNativo(double precioInf, double precioSup) {
         return productoDao.metodoNativo(precioInf, precioSup);
     }
+    
+    // Método para consultar la existencia de productos en un rango de precios por categoría
+    public List<Producto> findByExistencia(double precioInf, double precioSup) {
+        return productoDao.findByExistencia(precioInf, precioSup);
+    }
 
 }
