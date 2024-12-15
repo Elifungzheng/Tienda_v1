@@ -25,7 +25,8 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <ul class="navbar-nav" sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_VENDEDOR')">
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>
-                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>                           
+                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li> 
+                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/carrito/listado}">[[#{plantilla.carrito}]]</a></li>
                             <li class="nav-item dropdown" sec:authorize="hasRole('ROLE_ADMIN')">
                                 <a class="nav-link dropdown-toggle" 
                                    data-bs-toggle="dropdown" 
@@ -35,7 +36,8 @@
                                 <ul class="dropdown-menu dropdown-menu-dark" sec:authorize="hasRole('ROLE_ADMIN')">
                                     <li><a class="dropdown-item" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
                                     <li><a class="dropdown-item" th:href="@{/pruebas/listado}">[[#{plantilla.asociaciones}]]</a></li>
-                                    <li><a class="dropdown-item" th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a></li>                                    
+                                    <li><a class="dropdown-item" th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a></li> 
+                                    <li><a class="dropdown-item" th:href="@{/reportes/principal}">[[#{plantilla.reportes}]]</a></li> 
                                 </ul>
                             </li>                            
                         </ul>
